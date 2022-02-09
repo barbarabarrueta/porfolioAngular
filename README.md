@@ -30,3 +30,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 # porfolioAngular
 porfolio realizado en Angular
 >>>>>>> 766dbab9f109511760d5d51cb2d9b44f68ae8232
+<<<<<<< HEAD
+=======
+
+>>>>>>> f1e5450b52065ed40e9709229c194f6124ee6fb7
