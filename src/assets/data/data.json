@@ -1,0 +1,107 @@
+{
+    "name": "Bárbara Barrueta",
+    "position": "Full Stack Developer Jr",
+    "img": "./assets/fotoperfil.jpeg",
+    "company":{
+        "name": "Conicet",
+        "img": "",
+        "url": "#"
+        },
+    "school":{
+        "name": "UAI",
+        "img": "./assets/UAI.jpg",
+        "url": "https://uai.edu.ar/"
+        },
+    "ubicacion":"Miramar, Buenos Aires, Argentina",
+    "about": "diseñadora grafica, diseño web, front end, back end",
+
+
+    "education": [
+        {
+            "school": "INTI",
+            "title": "Plan Argentina Programa",
+            "img": "/assets/INTI.jpeg",
+            "career": "Full Stack Developer Jr",
+            "score": 0,
+            "start": "2021",
+            "end": "2022"
+        },
+        {
+            "school": "CFP 401",
+            "title": "Centro de Formacion Profesional",
+            "img": "/assets/CFP.jpg",
+            "career": "Programaor de pag web",
+            "score": 0,
+            "start": "2020",
+            "end": "2021"
+        },
+        {
+            "school": "UAI",
+            "title": "Ciencias de la comunicación",
+            "img": "./assets/UAI.jpg",
+            "career": "Diseñador Gráfico",
+            "score": 0,
+            "start": "1998",
+            "end": "2001"
+        },
+        {
+            "school": "Instituto Mariano Moreno",
+            "title": "Diseño gráfico",
+            "img": "./assets/MARIANOMORENO.jpg",
+            "career": "Diseñador gráfico asistido por computadora",
+            "score": 0,
+            "start": "1997",
+            "end": "1998"
+        },
+        {
+            "school": "Escuela Secundaria Media N° 14",
+            "title": "Perito Mercantil",
+            "img": "./assets/castillo.png",
+            "career": "Perito Mercantil",
+            "score": 0,
+            "start": "1991",
+            "end": "1996"
+        }
+      ],
+    "programas":[
+        {
+            "name": "Corel Draw",
+            "width": "75"
+        },
+        {
+            "name": "PhotoShop",
+            "width": "75"
+        },
+        {
+            "name": "HTML",
+            "width": "75"
+        },
+        {
+            "name": "CSS",
+            "width": "75"
+        },
+        {
+            "name": "Bootstrap",
+            "width": "75"
+        },
+        {
+            "name": "javascrip",
+            "width": "75"
+        },
+        {
+            "name": "Typescript",
+            "width": "75"
+        },
+        {
+            "name": "Angular",
+            "width": "75"
+        },
+        {
+            "name": "Laravel",
+            "width": "75"
+        }
+    ]
+
+
+    
+}

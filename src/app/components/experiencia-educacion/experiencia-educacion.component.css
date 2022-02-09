@@ -1,0 +1,24 @@
+.logo-image{
+    height: 100px;
+    width: 100px;
+}
+
+ul.items-list li {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+ul.items-list li div.data-container a {
+    display: flex;
+    color: black;
+    text-decoration: none;
+}
+
+ul.items-list li div.data-container a div.list-info, ul.items-list li div.data-container a div.list-info time {
+    color: gray;
+    margin: 0 5px;
+}
+ul.items-list li div.data-container a div.list-info p {
+    color: black;
+    margin: 0 5px;
+}

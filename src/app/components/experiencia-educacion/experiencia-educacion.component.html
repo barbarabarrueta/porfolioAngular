@@ -1,0 +1,62 @@
+<div class="m-2 p-2 borde">
+    <div>
+        <div class="row align-items-start">
+            <h4 class="col">Experiencia</h4>
+            <div class="btn-edit col-6"><a href="#" class="btn-right"><i class="fa fa-plus" onclick="showNewEduModal()"></i>más</a>
+            </div>
+         </div>
+        <div>
+          <ol>
+            <li>
+              <h4>Diseño web</h4>
+              <div>
+                <a href="http://grafikadelmar.com.ar">Gráfica del Mar </a>
+                <p>Diseño y maquetado de páginas web - jornada parcial</p>
+                <p>4 años - Miramar, Bs.As. Argentina</p>
+              </div>
+            </li>
+            <li>
+              <h4>Portfolio web</h4>
+              <div>
+                Detalle de lo desarrollado
+              </div>
+            </li>
+          </ol>
+        </div>
+    </div>
+    <div id="education">
+        <div class="row align-items-start">
+            <h4 class="col">Educación</h4>
+            <div class="btn-edit col-6"><a href="#" class="btn-right"><i class="fa fa-plus" onclick="showNewEduModal()"></i>más</a>
+            </div>
+        </div>
+        <div>
+            <ul class="items-list" id="eduList">
+                <li *ngFor="let educacion of educacionList">
+                    <div class="data-container">
+                        <a href="#">
+                            <div class ="logo">
+                                <img class="logo-image"
+                                [src]= "educacion.img"/>
+                            </div>
+                            <div class="list-info">
+                                <div>
+                                    <h3>{{educacion.school}}</h3>
+                                    <p>{{educacion.career}}</p>
+                                    <div class="nav justify-content-start">
+                                        <p><time>{{educacion.start}}</time></p><p>-</p><p><time>{{educacion.end}}</time></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div>
+                        <div class="btn-edit">
+                            <a href="#" class="btn-right"><i class="fa fa-pen"></i></a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div> 
+    </div>
+</div>

@@ -1,0 +1,47 @@
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-2">  
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="./assets/logoARGPROG.png" alt="" height="60" class="d-inline-block align-text-top">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse justify-content-end" id="navbarScroll">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link waves-effect waves-light">
+                <i class="grey-text fab fa-facebook-square fa-2x"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link waves-effect waves-light">
+                <i class="grey-text fab fa-instagram fa-2x"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link waves-effect waves-light">
+                <i class="grey-text fab fa-twitter fa-2x"></i>
+              </a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <button class="btn btn-outline-light my-2 my-sm-0" routerLink="/login">
+              Login</button>
+          </form>
+        </div>
+      </div>
+  </nav>
+
+<div class="cards m-2 borde">
+  <div class="fondo-porf">
+  <div class= "gradient align-items-center">
+      <img class="foto" [src]="miPorfolio.img"> 
+      <div class= "column">
+          <p class="texto-grande">{{miPorfolio.name}}</p>
+          <p class="texto-mediano">{{miPorfolio.ubicacion}}</p>
+      </div>
+  </div>
+  </div>
+</div>
