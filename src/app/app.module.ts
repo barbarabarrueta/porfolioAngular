@@ -11,6 +11,9 @@ import { ExperienciaEducacionComponent } from './components/experiencia-educacio
 import { AptitudesComponent } from './components/aptitudes/aptitudes.component';
 import { LogrosComponent } from './components/logros/logros.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
+import { LoginComponent } from './components/login/login.component';
+import { PorfolioComponent } from './components/porfolio/porfolio.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -21,12 +24,15 @@ import { ProyectosComponent } from './components/proyectos/proyectos.component';
     ExperienciaEducacionComponent,
     AptitudesComponent,
     LogrosComponent,
-    ProyectosComponent
+    ProyectosComponent,
+    LoginComponent,
+    PorfolioComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
