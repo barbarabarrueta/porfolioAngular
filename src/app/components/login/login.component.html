@@ -1,21 +1,42 @@
-<div class="m-2 p-2 borde">
-    <h5 class="mx-2">login </h5>  
-   <div class ="container">
-         <form> 
-         <div class="form-group m-2">
-             <label for="name">Name</label>
-             <input type="text" class="form-control" id="name"
-                 required name="name">
-         </div>
-         <div class="form-group m-2">
-             <label for="contr">Contraseña</label>
-             <input type="text" class="form-control" id="contr"
-                 required name="contr">
-         </div>
-         <button type="button" class="btn btn-primary m-2">entrar</button>
+<div class="m-2 p-2 borde col-8 fondoRosa"> 
+   <h3 class="mx-2">login</h3> 
+   <h4 class="mx-2">Inicia sesion para poder editar el porfolio</h4>  
+   <div class ="container" >
+     <form [formGroup]="form" (ngSubmit)="onEnviar($event)"> 
+          <div class="form-group m-2 ">
+             <label for="usuario" class="mx-2 col-2 text-end">usuario: </label>
+              <input type="usuario" formControlName="usuario"  class="col-6" 
+                 [ngClass]="{'is-invalid' : usuario?.errors && usuario?.touched, 'is-valid':!usuario?.errors && usuario?.touched}"
+                 class="form-control col-6" id="usuario" >
+         
+                <div *ngIf="usuario?.errors && usuario?.touched">
+                   <p *ngIf="usuario?.hasError('required')" class="text_danger">
+                     El usuario es requerido.
+                   </p>
+                 
+                   <p *ngIf="usuario?.hasError('usuario')" class="text-danger">
+                     El formato del usuario debe ser válido.
+                   </p>
+                </div>
+          </div>
+          <div class="form-group  m-2">
+             <label for="contr"  class="mx-2  col-2 text-end">Contraseña: </label>
+             <input type="password" formControlName="password"  class="col-6" 
+           [ngClass]="{'is-invalid':password?.errors && password?.touched, 'is-valid': !password?.errors && password?.touched}"
+                class="form-control col-6" id="contr" >
+               <div *ngIf="password?.errors && password?.touched">
+                   <p *ngIf="password?.hasError('required')" class="text_danger">
+                    El password es requerido.
+                   </p>
+                   <p *ngIf="password?.errors?.['minlength']" class="text-danger">
+                    La contraseña debe ser de 8 o más caracteres.
+                   </p>
+                </div>   
+          </div>
+         <button type="submit" class="btn btn-primary m-2">entrar</button>
          <button type="button" class="btn btn-primary m-2" routerLink="/porfolio">cancelar</button>
-         </form> 
-    </div>
-</div>
 
+     </form> 
+   </div>
+</div>
 

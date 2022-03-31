@@ -1,5 +1,6 @@
 {
-    "name": "Bárbara Barrueta",
+    "nombre": "Bárbara",
+    "apellido": "Barrueta",
     "position": "Full Stack Developer Jr",
     "img": "./assets/fotoperfil.jpeg",
     "company":{
@@ -30,7 +31,7 @@
             "school": "CFP 401",
             "title": "Centro de Formacion Profesional",
             "img": "/assets/CFP.jpg",
-            "career": "Programaor de pag web",
+            "career": "Programador de pag web",
             "score": 0,
             "start": "2020",
             "end": "2021"

@@ -7,3 +7,7 @@
     border-radius: 20px;
     border: 2px solid #646262;
 }
+
+.fondoRosa{
+    background: rgba(243, 181, 181, 0.3);
+}

@@ -1,13 +1,16 @@
-<div class="m-2 p-2 borde">
+<div class="m-2 p-2 borde bg-danger" style="--bs-bg-opacity: 0.25;">
     <div class="row align-items-start">
-        <h3 class="col-6">Acerca de</h3>
+        <h3 class="col-6">Acerca de mi</h3>
         <div class="col-6">
             <a href="#">
-            <i class="fa fa-plus" onclick="showNewEduModal()"></i> 
-            más</a>
+            <i class="fa-solid fa-pen m-2" onclick="showNewEduModal()"></i> 
+                </a>
+            <a href="#">
+            <i class="fa-solid fa-trash-can m-2">
+                </i></a>
         </div>
     </div>
     <div>
-        <p class="texto-mediano">{{miPorfolio.position}}</p>
+        <p class="texto-mediano">{{miPorfolio.about}}</p>
     </div> 
 </div>

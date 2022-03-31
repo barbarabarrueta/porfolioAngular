@@ -1,15 +1,20 @@
-<div class="m-2 p-2 borde">
+<div class="m-2 p-2 borde fondoRosa">
     <div class="row align-items-start">
         <h4 class="col-6">Hard Skills & Soft Skills</h4>
-        <div class="col-6"><a href="#">
-            <i class="fa fa-plus" onclick="showNewEduModal()"></i> más</a>
+        <div class="btn-edit col">
+            <a href="#">
+                <i class="fa-solid fa-pen m-2" onclick="showNewEduModal()"></i> 
+            </a>
+            <a href="#">
+                <i class="fa-solid fa-trash-can m-2"> </i>
+            </a>
         </div>
     </div>
     <div> 
         <h5 class="mx-2">Programas y Lenguajes: </h5>        
         <div class ="container">
             <div class="row">
-            <div class="col m-1 p-2 border border-2" *ngFor="let programa of programasList">
+            <div class="col m-1 p-2 border border-2 fondoBlanco" *ngFor="let programa of programasList">
                 <p>{{programa.name}}</p>
                 <p>{{programa.width}} %</p>
                 <div class="progress">
@@ -20,7 +25,7 @@
         </div>
 
     <h5 class="mx-2">Idiomas:</h5>
-        <ul>        
+        <ul class="col">        
             <li>Ingles
                 <div class="progress">
                     <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>

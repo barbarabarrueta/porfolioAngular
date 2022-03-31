@@ -9,11 +9,10 @@ import { EncabezadoComponent } from './components/encabezado/encabezado.componen
 import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
 import { ExperienciaEducacionComponent } from './components/experiencia-educacion/experiencia-educacion.component';
 import { AptitudesComponent } from './components/aptitudes/aptitudes.component';
-import { LogrosComponent } from './components/logros/logros.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { LoginComponent } from './components/login/login.component';
 import { PorfolioComponent } from './components/porfolio/porfolio.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -23,7 +22,6 @@ import { ReactiveFormsModule } from '@angular/forms';
     AcercaDeComponent,
     ExperienciaEducacionComponent,
     AptitudesComponent,
-    LogrosComponent,
     ProyectosComponent,
     LoginComponent,
     PorfolioComponent
@@ -32,6 +30,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
     ReactiveFormsModule
   ],
   providers: [],
