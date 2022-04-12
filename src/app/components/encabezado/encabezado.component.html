@@ -49,10 +49,10 @@
 <div class="cards m-2 borde">
   <div class="fondo-porf">
     <div class= "gradient align-items-center">
-         <img class="foto" [src]="miPorfolio.img"> 
-         <div class= "column align-self-end">
-            <p class="texto-grande">{{miPorfolio.nombre + " " + miPorfolio.apellido}}</p>
-            <p class="texto-mediano">{{miPorfolio.ubicacion}}</p>
+         <img class="foto" [src]="miPorfolioImg.img"> 
+         <div class= "column align-self-end" *ngFor="let pers of persona">
+            <p class="texto-grande">{{pers.nombre + " " + pers.apellido}}</p>
+            <p class="texto-mediano">{{pers.ubicacion}}</p> 
          </div>
     </div>
   </div> 

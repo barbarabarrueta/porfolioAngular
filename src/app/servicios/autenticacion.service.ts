@@ -13,6 +13,7 @@ export class AutenticacionService {
  //  url="http://npinti.ddns.net:9008/api/auth/login";
    uri = 'https://localhost:3000/api'; // la url que corresponda en cada caso
    token:any;
+   logeado: boolean = true;
 
    currentUserSubject: BehaviorSubject<any>;
 
@@ -38,10 +39,7 @@ export class AutenticacionService {
       });
       
     }
-  
-
-
-  
+    
 
       logout(){
         localStorage.removeItem('token');
