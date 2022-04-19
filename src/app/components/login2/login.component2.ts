@@ -2,15 +2,19 @@ import { ReturnStatement } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
+import { LoginUsuario } from 'src/app/models/login-usuario';
 import { AutenticacionService } from 'src/app/servicios/autenticacion.service';
+import { AuthService } from 'src/app/servicios/auth.service';
+import { TokenService } from 'src/app/servicios/token.service';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  selector: 'app-login2',
+  templateUrl: './login2.component.html',
+  styleUrls: ['./login2.component.css']
 })
-export class LoginComponent implements OnInit {
-  
+
+// este NOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+export class LoginComponent2 implements OnInit {
      form:FormGroup;
      constructor(private formBuilder:FormBuilder, private autenticationservice:AutenticacionService, private ruta:Router) { 
        this.form= this.formBuilder.group(
@@ -38,5 +42,6 @@ export class LoginComponent implements OnInit {
       this.ruta.navigate(['/porfolio']);
     })
   }
+ 
  
 }

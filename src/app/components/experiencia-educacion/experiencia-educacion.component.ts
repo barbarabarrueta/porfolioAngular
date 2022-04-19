@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Educacion } from 'src/app/models/educacion';
 import { PorfolioService } from 'src/app/servicios/porfolio.service';
+import { TokenService } from 'src/app/servicios/token.service';
 
 @Component({
   selector: 'app-experiencia-educacion',
@@ -10,13 +12,27 @@ import { PorfolioService } from 'src/app/servicios/porfolio.service';
 export class ExperienciaEducacionComponent implements OnInit {
  // educacionList:any; 
   educacionList!:Educacion[];
-  constructor(private datosPorfolio: PorfolioService) {   
-  }
+  isLogged:boolean= false;
+
+  constructor(
+    private datosPorfolio: PorfolioService,
+    private tokenService: TokenService,
+    private router:Router
+    )
+     {  }
 
   ngOnInit(): void {
     //  this.datosPorfolio.obtenerDatos().subscribe(data=>{
-   //    this.educacionList=data.education;
-  // });
+    //    this.educacionList=data.education;
+   //  });
+   //  this.isUserLogged = this.authService.isUserLogged();
+   
+    if(this.tokenService.getToken()){
+       this.isLogged = true;
+        }else{
+          this.isLogged = false;
+    };
+
 
     this.getdatosEdu();
   
@@ -28,7 +44,7 @@ export class ExperienciaEducacionComponent implements OnInit {
         this.educacionList = data;
         console.log(this.educacionList)
       }
-    )
+    );
   }
 
 

@@ -10,10 +10,13 @@ import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
 import { ExperienciaEducacionComponent } from './components/experiencia-educacion/experiencia-educacion.component';
 import { AptitudesComponent } from './components/aptitudes/aptitudes.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
-import { LoginComponent } from './components/login/login.component';
 import { PorfolioComponent } from './components/porfolio/porfolio.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { EditarComponent } from './components/experiencia-educacion/editar/editar.component';
+import { RegistroComponent } from './auth/registro.component';
+import { LoginComponent } from './auth/login.component';
+import { interceptorProvider, ProdInterceptorService } from './interceptors/prod-interceptor.service';
+import { ToastrModule } from 'ngx-toastr';
+import { EditarEduComponent } from './components/experiencia-educacion/editar/editar-edu.component';
 
 
 @NgModule({
@@ -26,16 +29,18 @@ import { EditarComponent } from './components/experiencia-educacion/editar/edita
     ProyectosComponent,
     LoginComponent,
     PorfolioComponent,
-    EditarComponent
+    RegistroComponent,
+    EditarEduComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ToastrModule.forRoot()
   ],
-  providers: [PorfolioService],
+  providers: [PorfolioService, interceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

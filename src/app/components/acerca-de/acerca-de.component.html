@@ -10,7 +10,7 @@
                 </i></a>
         </div>
     </div>
-    <div>
-      <p class="texto-mediano">{{acercade.about}}</p>
+    <div  *ngFor="let acerca of acercaDeList">
+      <p class="texto-mediano">{{acerca.acercaDe}}</p>
     </div> 
 </div>

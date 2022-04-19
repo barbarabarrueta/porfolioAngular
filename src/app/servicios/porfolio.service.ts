@@ -4,6 +4,8 @@ import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Persona } from '../models/persona';
 import { Educacion } from '../models/educacion';
+import { AcercaDe } from '../models/acerca-de';
+
 
 @Injectable({providedIn: 'root'})
 export class PorfolioService {
@@ -19,13 +21,26 @@ export class PorfolioService {
      return this.http.get('./assets/data/data.json');
   }
 
- 
+ //servicio para ver los datos de los componentes
   public getdatospersona():Observable<Persona[]>{
-    return this.http.get<Persona[]>(`${this.apiServerUrl}/ver/persona`);
+    return this.http.get<Persona[]>(`${this.apiServerUrl}ver/persona`);
+  }
+  public getdatoseducacion():Observable<Educacion[]>{
+   return this.http.get<Educacion[]>(`${this.apiServerUrl}ver/estudios`);
+  }
+  public getdatosacercaDe():Observable<AcercaDe[]>{
+  return this.http.get<AcercaDe[]>(`${this.apiServerUrl}ver/acercaDe`);
   }
 
-  public getdatoseducacion():Observable<Educacion[]>{
-   return this.http.get<Educacion[]>(`${this.apiServerUrl}/ver/estudios`);
- }
+
+  //servicio para traer los datos del porfolio
+  public detalleeducacion(id: number): Observable<Educacion>{
+    return this.http.get<Educacion>(`${this.apiServerUrl}detalle/${id}`);
+}
+
+//servicio para actualizar los datos del porfolio
+public update(id:number, educacion: Educacion):Observable<any>{
+  return this.http.put<any>(`${this.apiServerUrl}editar/estudios`, educacion);
+}
 
 }

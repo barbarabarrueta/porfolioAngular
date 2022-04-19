@@ -30,18 +30,15 @@
                 <i class="grey-text fab fa-instagram-square fa-2x"></i>
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link waves-effect waves-light"  href="https://www.twitter.com/barbymiramar">
-                <i class="grey-text fab fa-twitter fa-2x"></i>
-              </a>
+            <li class="nav-item" *ngIf="!isLogged">
+               <a class="btn btn-outline-light my-2 my-sm-0" routerLink="/login">
+                 Login</a>
+            </li>
+            <li class="nav-item" *ngIf="isLogged" (click)="onLogOut()">
+                <a class="btn btn-outline-light my-2 my-sm-0" routerLink="/porfolio">
+                 Logout</a>  
             </li>
           </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <a class="btn btn-outline-light my-2 my-sm-0" routerLink="/login">
-              Login</a>
-            <a class="btn btn-outline-light my-2 my-sm-0" routerLink="/porfolio">
-              Logout</a>  
-          </form>
         </div>
       </div>
   </nav>
@@ -54,6 +51,6 @@
             <p class="texto-grande">{{pers.nombre + " " + pers.apellido}}</p>
             <p class="texto-mediano">{{pers.ubicacion}}</p> 
          </div>
-    </div>
+    </div> 
   </div> 
 </div> 
