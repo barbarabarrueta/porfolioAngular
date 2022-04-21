@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { Educacion } from 'src/app/models/educacion';
 import { PorfolioService } from 'src/app/servicios/porfolio.service';
 import { TokenService } from 'src/app/servicios/token.service';
@@ -17,7 +18,8 @@ export class ExperienciaEducacionComponent implements OnInit {
   constructor(
     private datosPorfolio: PorfolioService,
     private tokenService: TokenService,
-    private router:Router
+    private toastr: ToastrService,
+    private router: Router
     )
      {  }
 
@@ -46,6 +48,21 @@ export class ExperienciaEducacionComponent implements OnInit {
       }
     );
   }
-
+  
+  borrarEdu(id: number){
+    this.datosPorfolio.deleteeducacion(id).subscribe(
+      data=>{
+        this.toastr.success('Educacion Eliminada', 'OK', {
+          timeOut: 3000, positionClass: 'toast-top-center'
+        });
+        this.getdatosEdu();
+      },
+      err => {
+        this.toastr.error(err.error.mensaje, 'Fail', {
+          timeOut: 3000,  positionClass: 'toast-top-center',
+        });
+      }
+    );
+  }
 
 }

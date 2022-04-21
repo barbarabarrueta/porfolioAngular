@@ -33,14 +33,29 @@ export class PorfolioService {
   }
 
 
+  //servicio para crear nuevos datos del porgolio
+  public postneweducacion(educacion:Educacion):Observable<any>{
+    return this.http.post<any>(`${this.apiServerUrl}new/estudios`, educacion);
+  }
+
+
   //servicio para traer los datos del porfolio
-  public detalleeducacion(id: number): Observable<Educacion>{
-    return this.http.get<Educacion>(`${this.apiServerUrl}detalle/${id}`);
+  public detalleeducacion(id: number): Observable<any>{
+    return this.http.get<any>(`${this.apiServerUrl}detalle/${id}`);
 }
 
+
+
 //servicio para actualizar los datos del porfolio
-public update(id:number, educacion: Educacion):Observable<any>{
-  return this.http.put<any>(`${this.apiServerUrl}editar/estudios`, educacion);
+public updateeducacion(id:number, educacion: Educacion):Observable<any>{
+  return this.http.put<any>(`${this.apiServerUrl}editar/estudios/${id}`, educacion);
+}
+
+
+
+//servicio para borrar los datos del porfolio
+public deleteeducacion(id:number):Observable<any>{
+  return this.http.delete<any>(`${this.apiServerUrl}delete/${id}`);
 }
 
 }

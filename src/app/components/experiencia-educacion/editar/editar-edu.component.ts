@@ -12,6 +12,7 @@ import { PorfolioService } from 'src/app/servicios/porfolio.service';
 export class EditarEduComponent implements OnInit {
 
   educacion!: Educacion;
+  
 
   constructor(
     private porfolioservice: PorfolioService,
@@ -23,22 +24,22 @@ export class EditarEduComponent implements OnInit {
 
   ngOnInit(){ 
      const id = this.activatedRoute.snapshot.params['id'];
-  this.porfolioservice.detalleeducacion(id).subscribe(
-    data => {
-      this.educacion = data;
-    },
-    err => {
-      this.toastr.error(err.error.mensaje, 'Fail', {
+     this.porfolioservice.detalleeducacion(id).subscribe(
+       (data: Educacion) => {
+         this.educacion = data;
+      },
+      err => {
+       this.toastr.error(err.error.mensaje, 'Fail', {
         timeOut: 3000,  positionClass: 'toast-top-center',
-      });
-      this.router.navigate(['/']);
-    }
-  );
-}
+        });
+     // this.router.navigate(['/']);
+      }
+     );
+} 
 
-onUpdate(): void {
-  const id = this.activatedRoute.snapshot.params['id'];
-  this.porfolioservice.update(id, this.educacion).subscribe(
+onUpdate(id: number): void {
+  //const id = this.activatedRoute.snapshot.params['id'];
+  this.porfolioservice.updateeducacion(id, this.educacion).subscribe(
     data => {
       this.toastr.success('Educacion Actualizada', 'OK', {
         timeOut: 3000, positionClass: 'toast-top-center'

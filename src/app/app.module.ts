@@ -17,6 +17,7 @@ import { LoginComponent } from './auth/login.component';
 import { interceptorProvider, ProdInterceptorService } from './interceptors/prod-interceptor.service';
 import { ToastrModule } from 'ngx-toastr';
 import { EditarEduComponent } from './components/experiencia-educacion/editar/editar-edu.component';
+import { NuevoEduComponent } from './components/experiencia-educacion/nuevo/nuevo-edu.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { EditarEduComponent } from './components/experiencia-educacion/editar/ed
     LoginComponent,
     PorfolioComponent,
     RegistroComponent,
-    EditarEduComponent
+    EditarEduComponent,
+    NuevoEduComponent
   ],
   imports: [
     BrowserModule,
