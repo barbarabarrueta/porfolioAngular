@@ -1,0 +1,19 @@
+<p>editor de acerca</p>
+<div class="container" > 
+    <div class="row mt-5">
+        <div class="col-md-4 mx-auto">
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="school">texto de acerca de:</label>
+                    <input type="text" class="form-control" id="acercaDe" name="acercaDe"
+                    [(ngModel)]="acercade.acercaDe" required>
+                </div>
+                
+                <button class="btn btn-outline-success btn-block m-2" [disabled]="!f.valid">Actualizar</button>
+                <button class="btn btn-outline-success btn-block m-2" routerLink="/porfolio">Cancelar</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+

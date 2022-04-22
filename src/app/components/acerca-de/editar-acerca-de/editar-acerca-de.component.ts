@@ -1,19 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { Educacion } from 'src/app/models/educacion';
+import { AcercaDe } from 'src/app/models/acerca-de';
 import { PorfolioService } from 'src/app/servicios/porfolio.service';
 
 @Component({
-  selector: 'app-editar-edu',
-  templateUrl: './editar-edu.component.html',
-  styleUrls: ['./editar-edu.component.css']
+  selector: 'app-editar-acerca-de',
+  templateUrl: './editar-acerca-de.component.html',
+  styleUrls: ['./editar-acerca-de.component.css']
 })
-export class EditarEduComponent implements OnInit {
-
-  educacion!: Educacion;
+export class EditarAcercaDeComponent implements OnInit {
+  acercade!:AcercaDe;
   id!: number;
-  
 
   constructor(
     private porfolioservice: PorfolioService,
@@ -22,12 +20,11 @@ export class EditarEduComponent implements OnInit {
     private router: Router
   ) { }
 
-
-  ngOnInit(){ 
-     this.id = this.activatedRoute.snapshot.params['id'];
-     this.porfolioservice.detalleeducacion(this.id).subscribe(
-       (data: Educacion) => {
-         this.educacion = data;
+  ngOnInit(): void {
+    this.id = this.activatedRoute.snapshot.params['id'];
+     this.porfolioservice.detalleacercade(this.id).subscribe(
+       (data: AcercaDe) => {
+         this.acercade = data;
       },
       err => {
        this.toastr.error(err.error.mensaje, 'Fail', {
@@ -40,9 +37,9 @@ export class EditarEduComponent implements OnInit {
 
 onUpdate(): void {
   //const id = this.activatedRoute.snapshot.params['id'];
-  this.porfolioservice.updateeducacion(this.id, this.educacion).subscribe(
+  this.porfolioservice.updateacercade(this.id, this.acercade).subscribe(
     data => {
-      this.toastr.success('Educacion Actualizada', 'OK', {
+      this.toastr.success('Acerca de Actualizado', 'OK', {
         timeOut: 3000, positionClass: 'toast-top-center'
       });
       this.router.navigate(['/']);
@@ -57,5 +54,3 @@ onUpdate(): void {
 }
 
 }
-
-

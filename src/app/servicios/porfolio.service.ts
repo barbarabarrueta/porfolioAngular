@@ -42,13 +42,19 @@ export class PorfolioService {
   //servicio para traer los datos del porfolio
   public detalleeducacion(id: number): Observable<any>{
     return this.http.get<any>(`${this.apiServerUrl}detalle/${id}`);
-}
+  }
+  public detalleacercade(id: number): Observable<any>{
+     return this.http.get<any>(`${this.apiServerUrl}detalleacercade/${id}`);
+  }
 
 
 
 //servicio para actualizar los datos del porfolio
 public updateeducacion(id:number, educacion: Educacion):Observable<any>{
   return this.http.put<any>(`${this.apiServerUrl}editar/estudios/${id}`, educacion);
+}
+public updateacercade(id:number, acercade: AcercaDe):Observable<any>{
+  return this.http.put<any>(`${this.apiServerUrl}editar/acercaDe/${id}`, acercade);
 }
 
 
@@ -57,5 +63,10 @@ public updateeducacion(id:number, educacion: Educacion):Observable<any>{
 public deleteeducacion(id:number):Observable<any>{
   return this.http.delete<any>(`${this.apiServerUrl}delete/${id}`);
 }
+public deleteacercade(id:number):Observable<any>{
+  return this.http.delete<any>(`${this.apiServerUrl}deleteacercade/${id}`);
+}
+
+
 
 }

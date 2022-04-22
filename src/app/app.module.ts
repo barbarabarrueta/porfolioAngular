@@ -18,6 +18,7 @@ import { interceptorProvider, ProdInterceptorService } from './interceptors/prod
 import { ToastrModule } from 'ngx-toastr';
 import { EditarEduComponent } from './components/experiencia-educacion/editar/editar-edu.component';
 import { NuevoEduComponent } from './components/experiencia-educacion/nuevo/nuevo-edu.component';
+import { EditarAcercaDeComponent } from './components/acerca-de/editar-acerca-de/editar-acerca-de.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { NuevoEduComponent } from './components/experiencia-educacion/nuevo/nuev
     PorfolioComponent,
     RegistroComponent,
     EditarEduComponent,
-    NuevoEduComponent
+    NuevoEduComponent,
+    EditarAcercaDeComponent
   ],
   imports: [
     BrowserModule,
