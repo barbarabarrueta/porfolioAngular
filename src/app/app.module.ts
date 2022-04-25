@@ -19,6 +19,10 @@ import { ToastrModule } from 'ngx-toastr';
 import { EditarEduComponent } from './components/experiencia-educacion/editar/editar-edu.component';
 import { NuevoEduComponent } from './components/experiencia-educacion/nuevo/nuevo-edu.component';
 import { EditarAcercaDeComponent } from './components/acerca-de/editar-acerca-de/editar-acerca-de.component';
+import { NuevoExpComponent } from './components/experiencia-educacion/nuevo/nuevo-exp.component';
+import { EditarExpComponent } from './components/experiencia-educacion/editar/editar-exp.component';
+import { EditarProComponent } from './components/proyectos/editar/editar-pro.component';
+import { NuevoProComponent } from './components/proyectos/nuevo/nuevo-pro.component';
 
 
 @NgModule({
@@ -34,7 +38,11 @@ import { EditarAcercaDeComponent } from './components/acerca-de/editar-acerca-de
     RegistroComponent,
     EditarEduComponent,
     NuevoEduComponent,
-    EditarAcercaDeComponent
+    EditarAcercaDeComponent,
+    NuevoExpComponent,
+    EditarExpComponent,
+    EditarProComponent,
+    NuevoProComponent
   ],
   imports: [
     BrowserModule,

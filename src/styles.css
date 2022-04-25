@@ -11,3 +11,9 @@
 .fondoRosa{
     background: rgba(243, 181, 181, 0.3);
 }
+.fondoNegro{
+    background: black;
+}
+.fondoBlanco{
+    background: white;
+}

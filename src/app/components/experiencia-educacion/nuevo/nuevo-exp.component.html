@@ -1,0 +1,27 @@
+<h2 class="m-2 p-2">Agregar nuevo item de experiencia</h2>
+<div class="container-mt-3 m-2 p-2">
+    <div class="row">
+        <div class="col-md-4 mx-auto-4">
+             <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="school">empresa:</label>
+                    <input type="text" class="form-control" id="empresa" name="empresa"
+                    [(ngModel)]="empresa" required>
+                </div>
+                <div class="form-group">
+                    <label for="puesto"> puesto: </label>
+                    <input type="text" class="form-control" id="puesto" name="puesto"
+                    [(ngModel)]="puesto" required>
+                </div>
+                <div class="form-group">
+                    <label for="descripcion"> descripcion:</label>
+                    <input type="text" class="form-control" id="descripcion" name="descripcion"
+                    [(ngModel)]="descripcion" required>
+                </div>
+                <button class="btn btn-outline-success btn-block m-2" [disabled]="!f.valid">Agregar</button>
+                <button class="btn btn-outline-success btn-block m-2" routerLink="/porfolio">Cancelar</button>
+             </form>
+        </div>
+    </div>
+</div>
+

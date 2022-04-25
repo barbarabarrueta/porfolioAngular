@@ -1,0 +1,29 @@
+<p>editor de experiencia</p>  
+  
+<div class="container" > 
+    <div class="row mt-5">
+        <div class="col-md-4 mx-auto">
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="empresa">empresa:</label>
+                    <input type="text" class="form-control" id="empresa" name="empresa"
+                    [(ngModel)]="experiencia.empresa" required>
+                </div>
+                <div class="form-group">
+                    <label for="puesto"> puesto: </label>
+                    <input type="text" class="form-control" id="puesto" name="puesto"
+                    [(ngModel)]="experiencia.puesto" required>
+                </div>
+                <div class="form-group">
+                    <label for="descripción"> descripción:</label>
+                    <input type="text" class="form-control" id="descripción" name="descripción"
+                    [(ngModel)]="experiencia.descripcion" required>
+                </div>
+                <button class="btn btn-outline-success btn-block m-2" [disabled]="!f.valid">Actualizar</button>
+                <button class="btn btn-outline-success btn-block m-2" routerLink="/porfolio">Cancelar</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
