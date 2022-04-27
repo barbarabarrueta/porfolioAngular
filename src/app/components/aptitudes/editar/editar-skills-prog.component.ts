@@ -1,43 +1,45 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { Experiencia } from 'src/app/models/experiencia';
+import { SkillsProgramas } from 'src/app/models/skills-programas';
 import { PorfolioService } from 'src/app/servicios/porfolio.service';
 
 @Component({
-  selector: 'app-editar-exp',
-  templateUrl: './editar-exp.component.html',
-  styleUrls: ['./editar-exp.component.css']
+  selector: 'app-editar-skills-prog',
+  templateUrl: './editar-skills-prog.component.html',
+  styleUrls: ['./editar-skills-prog.component.css']
 })
-export class EditarExpComponent implements OnInit {
-  experiencia!: Experiencia;
-  id!: number; 
+export class EditarSkillsProgComponent implements OnInit {
+    id!:number;
+    programa!: SkillsProgramas;
 
   constructor(private porfolioservice: PorfolioService,
     private activatedRoute: ActivatedRoute,
     private toastr: ToastrService,
     private router: Router) { }
 
+
     ngOnInit(){ 
       this.id = this.activatedRoute.snapshot.params['id'];
-      this.porfolioservice.detalleexperiencia(this.id).subscribe(
-        (data: Experiencia) => {
-          this.experiencia = data;
+      this.porfolioservice.detalleskillsprogramas(this.id).subscribe(
+        (data: SkillsProgramas) => {
+          this.programa = data;
        },
        err => {
         this.toastr.error(err.error.mensaje, 'Fail', {
          timeOut: 3000,  positionClass: 'toast-top-center',
          });
-      // this.router.navigate(['/']);
-       }
+         this.router.navigate(['/']);
+        }
       );
     } 
 
+
     onUpdate(): void {
       //const id = this.activatedRoute.snapshot.params['id'];
-      this.porfolioservice.updateexperiencia(this.id, this.experiencia).subscribe(
+      this.porfolioservice.updateskillsprogramas(this.id, this.programa).subscribe(
         data => {
-          this.toastr.success('Experiencia Actualizada', 'OK', {
+          this.toastr.success('skills Actualizada', 'OK', {
             timeOut: 3000, positionClass: 'toast-top-center'
           });
           this.router.navigate(['/']);
@@ -51,6 +53,5 @@ export class EditarExpComponent implements OnInit {
       );
     }   
     
-
 
 }

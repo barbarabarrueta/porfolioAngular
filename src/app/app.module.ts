@@ -23,6 +23,13 @@ import { NuevoExpComponent } from './components/experiencia-educacion/nuevo/nuev
 import { EditarExpComponent } from './components/experiencia-educacion/editar/editar-exp.component';
 import { EditarProComponent } from './components/proyectos/editar/editar-pro.component';
 import { NuevoProComponent } from './components/proyectos/nuevo/nuevo-pro.component';
+import { NuevoSkillsprogComponent } from './components/aptitudes/nuevo/nuevo-skillsprog.component';
+import { EditarSkillsProgComponent } from './components/aptitudes/editar/editar-skills-prog.component';
+import { EditarPersonaComponent } from './components/encabezado/editar/editar-persona.component';
+import { EditarSkillsIdiomaComponent } from './components/aptitudes/editar/editar-skills-idioma.component';
+import { NuevoSkillsIdiomaComponent } from './components/aptitudes/nuevo/nuevo-skills-idioma.component';
+import { NuevoSkillshabilComponent } from './components/aptitudes/nuevo/nuevo-skillshabil.component';
+import { EditarSkillshabilComponent } from './components/aptitudes/editar/editar-skillshabil.component';
 
 
 @NgModule({
@@ -42,7 +49,14 @@ import { NuevoProComponent } from './components/proyectos/nuevo/nuevo-pro.compon
     NuevoExpComponent,
     EditarExpComponent,
     EditarProComponent,
-    NuevoProComponent
+    NuevoProComponent,
+    NuevoSkillsprogComponent,
+    EditarSkillsProgComponent,
+    EditarPersonaComponent,
+    EditarSkillsIdiomaComponent,
+    NuevoSkillsIdiomaComponent,
+    NuevoSkillshabilComponent,
+    EditarSkillshabilComponent
   ],
   imports: [
     BrowserModule,

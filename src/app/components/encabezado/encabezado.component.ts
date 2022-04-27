@@ -56,7 +56,7 @@ export class EncabezadoComponent implements OnInit {
           this.persona = data;
           console.log(this.persona)
         }
-      )
+      ) 
      };
 
     onLogOut():void{

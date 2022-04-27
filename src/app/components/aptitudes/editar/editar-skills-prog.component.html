@@ -1,0 +1,23 @@
+<p class="m-2 p-2">editor de items programas</p>    
+<div class="container" > 
+    <div class="row mt-5">
+        <div class="col-md-4 mx-auto">
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="programa">programa:</label>
+                    <input type="text" class="form-control" id="programa" name="programa"
+                    [(ngModel)]="programa.programa" required>
+                </div>
+                <div class="form-group">
+                    <label for="porcentaje"> porcentaje: </label>
+                    <input type="text" class="form-control" id="porcentaje" name="porcentaje"
+                    [(ngModel)]="programa.porcentaje" required>
+                </div>
+                <button class="btn btn-outline-success btn-block m-2" [disabled]="!f.valid">Actualizar</button>
+                <button class="btn btn-outline-success btn-block m-2" routerLink="/porfolio">Cancelar</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
