@@ -11,7 +11,8 @@ import { EmailValidator } from '@angular/forms';
 })
 export class AutenticacionService {
  //  url="http://npinti.ddns.net:9008/api/auth/login";
-   uri = 'https://localhost:3000/api'; // la url que corresponda en cada caso
+  // uri = 'https://localhost:3000/api'; // la url que corresponda en cada caso
+   uri = 'https://gentle-hamlet-03058.herokuapp.com';
    token:any;
    logeado: boolean = true;
 
